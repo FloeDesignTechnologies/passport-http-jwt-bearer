@@ -1,6 +1,6 @@
 {
   "name": "passport-http-jwt-bearer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HTTP JWT Bearer authentication strategy for Passport.",
   "main": "./lib",
   "scripts": {
@@ -28,11 +28,11 @@
     "chai-passport-strategy": "^0.2.0",
     "mocha": "^2.0.1"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/Pheromone/passport-http-jwt-bearer.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Pheromone/passport-http-jwt-bearer.git"
   },
   "bugs": {
-    "url" : "http://github.com/Pheromone/passport-http-jwt-bearer/issues"
+    "url": "http://github.com/Pheromone/passport-http-jwt-bearer/issues"
   }
 }
