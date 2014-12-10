@@ -1,0 +1,39 @@
+{
+  "name": "passport-http-jwt-bearer",
+  "version": "0.1.0",
+  "description": "HTTP JWT Bearer authentication strategy for Passport.",
+  "main": "./lib",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node"
+  },
+  "keywords": [
+    "oauth2",
+    "passport",
+    "jwt",
+    "jsonwebtoken"
+  ],
+  "author": [
+    "Pierre Buyle <buyle@pheromone.ca>"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^1.2.0",
+    "passport-http-bearer": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "chai-passport-strategy": "^0.2.0",
+    "mocha": "^2.0.1"
+  },
+  "license" : "LGPL-3.0+",
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/Pheromone/passport-http-jwt-bearer.git"
+  },
+  "bugs": {
+    "url" : "http://github.com/Pheromone/passport-http-jwt-bearer/issues"
+  }
+}
