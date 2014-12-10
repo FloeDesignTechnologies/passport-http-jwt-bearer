@@ -1,5 +1,7 @@
 # passport-http-jwt-bearer
 
+[![Build Status](https://travis-ci.org/Pheromone/passport-http-jwt-bearer.svg?branch=master)](https://travis-ci.org/Pheromone/passport-http-jwt-bearer)
+
 JSON Web Token (JWT) Bearer Token for OAuth 2.0 user authentication strategy
 for Passport, using [HTTP Bearer authentication](https://www.npmjs.org/package/passport-http-bearer)
 and [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken).
