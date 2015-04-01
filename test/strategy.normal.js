@@ -159,7 +159,7 @@ describe('Strategy', function() {
       chai.passport.use(new Strategy(secret, {audience: 'foo'}, function(token, done) { done(null, false)}))
         .fail(function(challenge) {;
           expect(challenge).to.be.a.string;
-          expect(challenge).to.equal('Bearer realm="Users", error="invalid_token", error_description="Invalid token (jwt audience invalid. expected: bar)"');
+          expect(challenge).to.equal('Bearer realm="Users", error="invalid_token", error_description="Invalid token (jwt audience invalid. expected: foo)"');
           done();
         })
         .req(function(req) {
@@ -172,7 +172,7 @@ describe('Strategy', function() {
       chai.passport.use(new Strategy(secret, {issuer: 'foo'}, function(token, done) { done(null, false)}))
         .fail(function(challenge) {;
           expect(challenge).to.be.a.string;
-          expect(challenge).to.equal('Bearer realm="Users", error="invalid_token", error_description="Invalid token (jwt issuer invalid. expected: bar)"');
+          expect(challenge).to.equal('Bearer realm="Users", error="invalid_token", error_description="Invalid token (jwt issuer invalid. expected: foo)"');
           done();
         })
         .req(function(req) {
