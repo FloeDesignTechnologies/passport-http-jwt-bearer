@@ -24,9 +24,9 @@
     "passport-http-bearer": "^1.0.1"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
-    "chai-passport-strategy": "^0.2.0",
-    "mocha": "^2.0.1"
+    "chai": "^2.2",
+    "chai-passport-strategy": "^0.2",
+    "mocha": "^2.0"
   },
   "repository": {
     "type": "git",
