@@ -4,7 +4,7 @@
 
 JSON Web Token (JWT) Bearer Token for OAuth 2.0 user authentication strategy
 for Passport, using [HTTP Bearer authentication](https://www.npmjs.org/package/passport-http-bearer)
-and [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken).
+and [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken).
 
 This module lets you authenticate requests containing a JSON Web Token (JWT)
 encoded and signed OAuth2 access token, in your Node.js applications.
