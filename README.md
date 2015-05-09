@@ -44,7 +44,7 @@ user.  Optional `info` can be passed, typically including associated scope,
 which will be set by Passport at `req.authInfo` to be used by later middleware
 for authorization and access control.
 
-    var JwtBearerStrategy require('passport-http-bearer')
+    var JwtBearerStrategy require('passport-http-jwt-bearer')
 
      passport.use(new JwtBearerStrategy(
        secretOrPublicKey,
