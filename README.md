@@ -12,7 +12,7 @@ encoded and signed OAuth2 access token, in your Node.js applications.
 Bearer tokens are typically used protect API endpoints, and are often issued
 using OAuth 2.0.
 
-JSON Web Toke (JWT) is a compact, URL-safe means of representing claims to be
+JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be
 transferred between two parties.  The claims in a JWT are encoded as a
 JavaScript Object Notation (JSON) object that is used as the payload of a JSON
 Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption
