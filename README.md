@@ -1,5 +1,7 @@
 # passport-http-jwt-bearer
 
+**This package is currently unmaintained and looking for a new maintainer. Contact us if you are interested taking ownership of this package. **
+
 [![Build Status](https://travis-ci.org/FloeDesignTechnologies/passport-http-jwt-bearer.svg?branch=master)](https://travis-ci.org/FloeDesignTechnologies/passport-http-jwt-bearer) [![Dependency Status](https://david-dm.org/FloeDesignTechnologies/passport-http-jwt-bearer.svg)](https://david-dm.org/FloeDesignTechnologies/passport-http-jwt-bearer) [![devDependency Status](https://david-dm.org/FloeDesignTechnologies/passport-http-jwt-bearer/dev-status.svg)](https://david-dm.org/FloeDesignTechnologies/passport-http-jwt-bearer#info=devDependencies)
 
 JSON Web Token (JWT) Bearer Token for OAuth 2.0 user authentication strategy
