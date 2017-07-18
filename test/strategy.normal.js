@@ -8,7 +8,7 @@ describe('Strategy', function() {
   var strategy = new Strategy(
     secret,
     function(token, done) {
-      if (token.sub % 2) {
+      if (token.sub === 'userid') {
         return done(null, { id: token.sub }, token);
       }
       return done(null, false);
@@ -27,19 +27,19 @@ describe('Strategy', function() {
           done();
         })
         .req(function(req) {
-          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {subject: 1, expiresInMinutes: 15});
+          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {subject: 'userid', expiresIn: '15m'});
         })
         .authenticate();
     });
 
     it('should supply user', function() {
       expect(user).to.be.an.object;
-      expect(user.id).to.equal(1);
+      expect(user.id).to.equal('userid');
     });
 
     it('should supply info', function() {
       expect(info).to.be.an.object;
-      expect(info).to.have.property('sub', 1);
+      expect(info).to.have.property('sub', 'userid');
     });
   });
 
@@ -56,19 +56,19 @@ describe('Strategy', function() {
         })
         .req(function(req) {
           req.body = {};
-          req.body.access_token = jwt.sign({}, secret, {subject: 1, expiresInMinutes: 15});
+          req.body.access_token = jwt.sign({}, secret, {subject: 'userid', expiresIn: '15m'});
         })
         .authenticate();
     });
 
     it('should supply user', function() {
       expect(user).to.be.an.object;
-      expect(user.id).to.equal(1);
+      expect(user.id).to.equal('userid');
     });
 
     it('should supply info', function() {
       expect(info).to.be.an.object;
-      expect(info).to.have.property('sub', 1);
+      expect(info).to.have.property('sub', 'userid');
     });
   });
 
@@ -85,19 +85,19 @@ describe('Strategy', function() {
         })
         .req(function(req) {
           req.query = {};
-          req.query.access_token = jwt.sign({}, secret, {subject: 1, expiresInMinutes: 15});
+          req.query.access_token = jwt.sign({}, secret, {subject: 'userid', expiresIn: '15m'});
         })
         .authenticate();
     });
 
     it('should supply user', function() {
       expect(user).to.be.an.object;
-      expect(user.id).to.equal(1);
+      expect(user.id).to.equal('userid');
     });
 
     it('should supply info', function() {
       expect(info).to.be.an.object;
-      expect(info).to.have.property('sub', 1);
+      expect(info).to.have.property('sub', 'userid');
     });
   });
 
@@ -124,7 +124,7 @@ describe('Strategy', function() {
           done();
         })
         .req(function(req) {
-          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {subject: 1, expiresInMinutes: -1});
+          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {subject: 'userid', expiresIn: -1});
         })
         .authenticate();
     });
@@ -137,7 +137,7 @@ describe('Strategy', function() {
           done();
         })
         .req(function(req) {
-          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret + 'x', {subject: 1, expiresInMinutes: 15});
+          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret + 'x', {subject: 'userid', expiresIn: '15m'});
         })
         .authenticate();
     });
@@ -150,7 +150,7 @@ describe('Strategy', function() {
           done();
         })
         .req(function(req) {
-          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {subject: 1, expiresInMinutes: 15, algorithm: 'none'});
+          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {subject: 'userid', expiresIn: '15m', algorithm: 'none'});
         })
         .authenticate();
     });
@@ -163,7 +163,7 @@ describe('Strategy', function() {
           done();
         })
         .req(function(req) {
-          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {audience: 'bar', subject: 1, expiresInMinutes: 15});
+          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {audience: 'bar', subject: 'userid', expiresIn: '15m'});
         })
         .authenticate();
     });
@@ -176,7 +176,7 @@ describe('Strategy', function() {
           done();
         })
         .req(function(req) {
-          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {issuer: 'bar', subject: 1, expiresInMinutes: 15});
+          req.headers.authorization = 'Bearer ' + jwt.sign({}, secret, {issuer: 'bar', subject: 'userid', expiresIn: '15m'});
         })
         .authenticate();
     });
