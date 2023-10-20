@@ -20,13 +20,13 @@
     "url": "http://www.opensource.org/licenses/MIT"
   },
   "dependencies": {
-    "jsonwebtoken": "^5.0",
+    "jsonwebtoken": "^9.0.2",
     "passport-http-bearer": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^2.2",
-    "chai-passport-strategy": "^0.2",
-    "mocha": "^2.0"
+    "chai-passport-strategy": "^3.0.0",
+    "mocha": "^10.2.0"
   },
   "repository": {
     "type": "git",
